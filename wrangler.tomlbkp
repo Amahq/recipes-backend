@@ -1,0 +1,8 @@
+name = "recipes-backend"
+main = "src/index.ts"
+compatibility_date = "2025-06-02"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "recipes-db-clean"
+database_id = "86ba3b79-4e64-4768-bbc5-902f0a080aea"
