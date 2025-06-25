@@ -3,6 +3,7 @@ import type { MiddlewareHandler } from "hono";
 const allowedOrigins = [
   "https://chokoretov1.pages.dev",
   "https://chokoreto-testing.pages.dev",
+  "https://*.chokoreto-testing.pages.dev",
 ];
 
 export const withCors: MiddlewareHandler = async (c, next) => {
