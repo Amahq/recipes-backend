@@ -1,7 +1,8 @@
 import type { MiddlewareHandler } from "hono";
 
 // Regex que permite subdominios y raíz de testing y producción
-const dynamicAllowedRegex = /^https:\/\/([a-z0-9-]+\.)?(chokoreto-testing|chokoretov1)\.pages\.dev$/;
+const dynamicAllowedRegex =
+  /^https:\/\/([a-z0-9-]+\.)*chokoreto(?:-testing|v1)\.pages\.dev$/;
 
 export const withCors: MiddlewareHandler = async (c, next) => {
   const origin = c.req.header("Origin");
