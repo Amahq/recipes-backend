@@ -6,6 +6,8 @@ const dynamicAllowedRegex =
 
 export const withCors: MiddlewareHandler = async (c, next) => {
   const origin = c.req.header("Origin");
+    // 🔍 Log del origin recibido
+  console.log("CORS Origin header:", origin);
   const isAllowed = origin && dynamicAllowedRegex.test(origin);
 
   if (isAllowed) {
